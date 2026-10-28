@@ -149,6 +149,8 @@ export const builds: Build[] = [
     title: 'Analytics dashboard',
     description: 'Login, KPI charts and a data table with search, filters and pagination on a public API.',
     stack: ['React', 'TypeScript', 'TanStack Table', 'Recharts'],
+    live: 'https://chennareddy-dashboard.vercel.app',
+    code: 'https://github.com/chennareddyA/analytics-dashboard',
   },
   {
     title: 'Figma to code: SaaS landing page',
