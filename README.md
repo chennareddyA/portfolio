@@ -1,38 +1,31 @@
-# React developer portfolio
+# Chenna Reddy | React Frontend Developer
 
-Personal portfolio site built with React 19, TypeScript, Vite and Tailwind CSS v4.
+My personal portfolio website, showing the services I offer, production apps I've built, and my open-source projects.
 
-## Make it yours
+**Live site:** https://chennareddy-portfolio.vercel.app
 
-All content lives in one file: `src/data/profile.ts`.
+![Portfolio](docs/portfolio.png)
 
-1. Replace every value marked `TODO` (name, email, Upwork, Fiverr, GitHub, LinkedIn).
-2. Check the four production case studies read accurately for your work.
-3. As you finish each portfolio project, add its `live` and `code` links under `builds`.
-   Projects without links show as "In progress".
-4. Update the page title and description in `index.html`.
+## About me
+
+I'm a frontend developer based in Hyderabad, building production web and mobile apps with React, TypeScript and Tailwind CSS. I turn Figma designs into responsive, clean-coded websites and dashboards.
+
+- **Upwork:** https://www.upwork.com/freelancers/~01213b475bdefd28f2
+- **Fiverr:** https://www.fiverr.com/s/DmmYoba
+- **LinkedIn:** https://www.linkedin.com/in/chenna-reddy-279243304/
+- **Email:** chennareddya5@gmail.com
+
+## Projects
+
+- **Analytics Dashboard:** login, KPI cards, charts, and searchable tables with Excel export ([live demo](https://chennareddy-dashboard.vercel.app) · [code](https://github.com/chennareddyA/analytics-dashboard))
+
+## Built with
+
+React 19, TypeScript, Vite and Tailwind CSS v4. Light and dark themes, fully responsive, with all content managed from a single data file (`src/data/profile.ts`).
 
 ## Run locally
 
 ```bash
 npm install
 npm run dev
-```
-
-## Deploy for free on Vercel
-
-1. Push this folder to a new public GitHub repository.
-2. Go to vercel.com, sign in with GitHub, click "Add New Project" and pick the repo.
-3. Vercel detects Vite automatically. Click Deploy.
-4. You get a link like `your-name.vercel.app`. Use it on Upwork, Fiverr and LinkedIn.
-
-Netlify works the same way (build command `npm run build`, publish directory `dist`).
-
-## Structure
-
-```
-src/
-  data/profile.ts      all text and links
-  components/          one file per section
-  index.css            colour tokens, light and dark themes
 ```
