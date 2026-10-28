@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/* Colour tokens. Light is the default; dark follows the system setting. */
+:root {
+  --canvas: #eef0f3;
+  --surface: #ffffff;
+  --ink: #1a1d29;
+  --muted: #5b6172;
+  --line: #d5d9e0;
+  --select: #0d7fe0;
+  --select-ink: #ffffff;
+  --redline: #e0336d;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --canvas: #15171d;
+    --surface: #1d2028;
+    --ink: #e9ebf1;
+    --muted: #9aa1b3;
+    --line: #2e323d;
+    --select: #4aa8ff;
+    --select-ink: #0b1a2b;
+    --redline: #ff6b98;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --canvas: #15171d;
+  --surface: #1d2028;
+  --ink: #e9ebf1;
+  --muted: #9aa1b3;
+  --line: #2e323d;
+  --select: #4aa8ff;
+  --select-ink: #0b1a2b;
+  --redline: #ff6b98;
+  color-scheme: dark;
+}
+
+@theme {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-select: var(--select);
+  --color-select-ink: var(--select-ink);
+  --color-redline: var(--redline);
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5rem);
+  background: var(--canvas);
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 60;
+  background: var(--canvas);
+}
+
+/* Faint design-canvas dot grid behind the hero */
+.canvas-grid {
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--select);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
