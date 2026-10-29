@@ -153,10 +153,12 @@ export const builds: Build[] = [
     code: 'https://github.com/chennareddyA/analytics-dashboard',
   },
   {
-    title: 'Figma to code: SaaS landing page',
-    description: 'A Figma Community design rebuilt pixel-accurately, responsive from 360px to 1440px.',
-    stack: ['Next.js', 'Tailwind CSS'],
-  },
+  title: 'Figma to code: SaaS landing page',
+  description: 'A Figma Community design rebuilt pixel-accurately, responsive from 360px to 1440px.',
+  stack: ['Next.js', 'Tailwind CSS'],
+  live: 'https://chennareddy-landing.vercel.app',
+  code: 'https://github.com/chennareddyA/saas-landing',
+},
   {
     title: 'E-commerce storefront',
     description: 'Product listing with filters, product page, cart and checkout UI with persisted state.',
