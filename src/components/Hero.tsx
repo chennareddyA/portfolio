@@ -1,11 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { caseStudies, profile } from '../data/profile'
 
 type Mode = 'design' | 'built'
-
-function prefersReducedMotion() {
-  return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-}
 
 /** A selection handle on a corner of the design frame. */
 function Handle({ className }: { className: string }) {
@@ -27,23 +23,9 @@ function Redline({ label, className = '' }: { label: string; className?: string 
 }
 
 export default function Hero() {
-  const [mode, setMode] = useState<Mode>(() => (prefersReducedMotion() ? 'built' : 'design'))
-  const userChose = useRef(false)
+  // Opens on the finished design; visitors can switch to the annotated "Design" view themselves
+  const [mode, setMode] = useState<Mode>('built')
   const design = mode === 'design'
-
-  // One page-load moment: the annotated design frame "builds" itself.
-  useEffect(() => {
-    if (prefersReducedMotion()) return
-    const t = window.setTimeout(() => {
-      if (!userChose.current) setMode('built')
-    }, 1700)
-    return () => window.clearTimeout(t)
-  }, [])
-
-  function choose(next: Mode) {
-    userChose.current = true
-    setMode(next)
-  }
 
   const fade = `transition-opacity duration-500 ${design ? 'opacity-100' : 'opacity-0'}`
 
@@ -63,14 +45,17 @@ export default function Hero() {
           <div
             role="group"
             aria-label="Show this section as"
-            className="inline-flex rounded-lg border border-line bg-surface p-1 text-sm"
+            className="inline-flex items-center rounded-lg border border-line bg-surface p-1 text-sm"
           >
+            <span className="px-2 text-muted" aria-hidden="true">
+              View
+            </span>
             {(['design', 'built'] as const).map((m) => (
               <button
                 key={m}
                 type="button"
                 aria-pressed={mode === m}
-                onClick={() => choose(m)}
+                onClick={() => setMode(m)}
                 className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
                   mode === m ? 'bg-ink text-canvas' : 'text-muted hover:text-ink'
                 }`}
