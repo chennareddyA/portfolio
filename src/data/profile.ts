@@ -145,10 +145,11 @@ export type Build = {
 // Portfolio projects you build yourself. A project with no live or code link
 // shows as "In progress"; add the links as you finish each one.
 export const builds: Build[] = [
-  {
+    {
     title: 'Analytics dashboard',
-    description: 'Login, KPI charts and a data table with search, filters and pagination on a public API.',
-    stack: ['React', 'TypeScript', 'TanStack Table', 'Recharts'],
+    description:
+      'Login with protected routes, KPI cards, sales charts, and product and customer tables with search, filters, sorting, pagination and Excel export.',
+    stack: ['React', 'TypeScript', 'TanStack Table', 'Recharts', 'Zustand'],
     live: 'https://chennareddy-dashboard.vercel.app',
     code: 'https://github.com/chennareddyA/analytics-dashboard',
   },
@@ -159,10 +160,13 @@ export const builds: Build[] = [
   live: 'https://chennareddy-landing.vercel.app',
   code: 'https://github.com/chennareddyA/saas-landing',
 },
-  {
+    {
     title: 'E-commerce storefront',
-    description: 'Product listing with filters, product page, cart and checkout UI with persisted state.',
-    stack: ['React', 'Zustand', 'Tailwind CSS'],
+    description:
+      'Online store with search, filters in the URL, product pages with offers, a saved cart and wishlist, Buy now, and a validated 3-step checkout. Unit tested with Vitest.',
+    stack: ['React', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Vitest'],
+    live: 'https://chennareddy-shop.vercel.app',
+    code: 'https://github.com/chennareddyA/shopnest',
   },
   {
     title: 'Performance case study',
@@ -178,7 +182,7 @@ export const skills: { group: string; items: string[] }[] = [
   { group: 'Mobile', items: ['React Native', 'Expo', 'NativeWind'] },
   { group: 'Auth and security', items: ['Keycloak', 'JWT', 'Role-based access', 'OTP flows'] },
   { group: 'Database', items: ['SQL Server', 'Stored procedures', 'Reporting queries'] },
-  { group: 'Quality and tools', items: ['Vitest', 'Jest', 'Testing Library', 'ESLint', 'Prettier', 'Git', 'Vite'] },
+  { group: 'Quality and tools', items: ['Vitest', 'Jest', 'Testing Library', 'ESLint', 'Prettier', 'Git', 'Vite', 'Vercel'] },
 ]
 
 export const process: { title: string; text: string }[] = [

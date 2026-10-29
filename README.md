@@ -18,6 +18,8 @@ I'm a frontend developer based in Hyderabad, building production web and mobile 
 ## Projects
 
 - **Analytics Dashboard:** login, KPI cards, charts, and searchable tables with Excel export ([live demo](https://chennareddy-dashboard.vercel.app) · [code](https://github.com/chennareddyA/analytics-dashboard))
+- **Banking SaaS Landing Page:** Figma design rebuilt in Next.js and Tailwind, fully responsive with interactive pricing, currency converter and testimonials ([live demo](https://chennareddy-landing.vercel.app) · [code](https://github.com/chennareddyA/saas-landing))
+- **ShopNest E-commerce Storefront:** product search and filters, Amazon-style product pages, persistent cart and wishlist, Buy now and multi-step checkout, unit tested with Vitest ([live demo](https://chennareddy-shop.vercel.app) · [code](https://github.com/chennareddyA/shopnest))
 
 ## Built with
 
