@@ -47,9 +47,6 @@ export default function Hero() {
             aria-label="Show this section as"
             className="inline-flex items-center rounded-lg border border-line bg-surface p-1 text-sm"
           >
-            <span className="px-2 text-muted" aria-hidden="true">
-              View
-            </span>
             {(['design', 'built'] as const).map((m) => (
               <button
                 key={m}
