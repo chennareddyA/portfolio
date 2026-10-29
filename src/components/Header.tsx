@@ -45,8 +45,9 @@ export default function Header() {
       style={{ top: 'env(safe-area-inset-top, 0px)' }}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight">
-          {profile.name}
+                <a href="#top" className="flex flex-col leading-tight">
+          <span className="font-display text-lg font-bold tracking-tight">{profile.name}</span>
+          <span className="text-xs text-muted">{profile.role}</span>
         </a>
         <nav aria-label="Main" className="flex items-center gap-1 sm:gap-2">
           <ul className="hidden items-center gap-1 sm:flex">
