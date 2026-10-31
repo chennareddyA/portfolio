@@ -15,6 +15,9 @@ export default function Work() {
             className="grid gap-8 rounded-[1.75rem] border border-line bg-surface p-6 sm:p-10 lg:grid-cols-[1fr_1.5fr] lg:gap-14"
           >
             <div>
+              {c.impact && (
+                <p className="mb-3 inline-flex rounded-full bg-select/10 px-3 py-1 text-sm font-semibold text-select">{c.impact}</p>
+              )}
               <p className="text-sm text-muted">{c.kind}</p>
               <h3 className="mt-2 font-display text-[1.75rem] leading-[1.1] font-bold tracking-[-0.02em] sm:text-3xl">
                 {c.title}

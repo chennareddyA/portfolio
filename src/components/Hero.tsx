@@ -48,7 +48,9 @@ export default function Hero() {
                   <a href="#work" className="block text-[0.95rem] leading-snug hover:text-select">
                     {c.title}
                   </a>
-                  <span className="text-sm text-muted">{c.stack.slice(0, 2).join(', ')}</span>
+                  <span className={`text-sm ${c.impact ? 'font-medium text-select' : 'text-muted'}`}>
+                    {c.impact ?? c.stack.slice(0, 2).join(', ')}
+                  </span>
                 </li>
               ))}
             </ul>

@@ -9,8 +9,8 @@ export const profile = {
   location: 'Hyderabad, India', // TODO: city, India
   available: true, // shows the "Available for new projects" status
   headline: 'I turn your designs into fast, working React apps.',
-  intro:
-    'Frontend developer building production apps with React, TypeScript and Tailwind for government and enterprise clients. I take your Figma file, screenshot or idea and deliver a responsive, clean-coded site or dashboard, with regular updates and a live preview link while I work.',
+   intro:
+    'Frontend developer building production apps with React, TypeScript and Tailwind for government and enterprise clients, including systems used by 600,000+ people. I take your Figma file, screenshot or idea and deliver a responsive, clean-coded site or dashboard, with regular updates and a live preview link while I work.',
   email: 'chennareddya5@gmail.com', // TODO
   links: {
     upwork: 'https://www.upwork.com/freelancers/~01213b475bdefd28f2?mp_source=share', // TODO
@@ -67,6 +67,7 @@ export const services: Service[] = [
 
 export type CaseStudy = {
   title: string
+  impact?: string // headline number, shown highlighted
   kind: string
   summary: string
   built: string[]
@@ -78,6 +79,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     title: 'Online recruitment application portal',
+    impact: 'Used by 600,000+ candidates',
     kind: 'Government recruitment board, public-facing web app',
     summary:
       'Candidates register, verify, fill a multi-step application, pay the fee online and print their application.',
@@ -92,6 +94,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     title: 'Exam evaluation and marks entry system',
+    impact: '2 million+ answer scripts evaluated',
     kind: 'Answer-script evaluation for a large examination body',
     summary:
       'Evaluators scan answer-script barcodes with the device camera and enter marks; admins track progress across camps and subjects.',
