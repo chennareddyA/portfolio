@@ -168,10 +168,13 @@ export const builds: Build[] = [
     live: 'https://chennareddy-shop.vercel.app',
     code: 'https://github.com/chennareddyA/shopnest',
   },
-  {
+    {
     title: 'Performance case study',
-    description: 'A slow React page refactored, with Lighthouse scores and bundle size before and after.',
-    stack: ['React', 'Lighthouse', 'React Profiler'],
+    description:
+      'A slow 10,000-item React list measured and fixed: virtualization, memoization, deferred rendering and lighter libraries. Renders went from 372 ms to under 5 ms, with live metrics on both versions.',
+    stack: ['React', 'TypeScript', 'TanStack Virtual', 'React Profiler'],
+    live: 'https://chennareddy-perf.vercel.app',
+    code: 'https://github.com/chennareddyA/react-performance-case-study',
   },
 ]
 
